@@ -35,7 +35,6 @@ class ExportService extends AbstractExportCollection
                 return 'Ошибка. Тип '.$collection['type'].' не доступен в программе.';
             }
             $this->types[$collection['type']]->setOptions($collection['setting']);
-            var_dump($this->types[$collection['type']]->getOptions());
             $resultData = $this->types[$collection['type']]->getExportResult($dataArray);
             // далее сохранить $resultData в файл с именем $exportFileName и расширением $collection->type
         }
